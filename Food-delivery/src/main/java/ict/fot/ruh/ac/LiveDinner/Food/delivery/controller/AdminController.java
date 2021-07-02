@@ -12,9 +12,24 @@ public class AdminController {
     @Autowired
     public AdminService adminService;
 
-    @GetMapping("/Admin")
+//    @GetMapping("/")
+//    public String viewHomePage(){
+//        return "index";
+//    }
+
+    @GetMapping("/admin")
     public String viewAdminPage(Model model){
         model.addAttribute("listAdmins",adminService.getAllAdmin());
         return "admin";
     }
+
+//    @GetMapping("/menu")
+//    public String viewMenuPage(){
+//        return "menu";
+//    }
+//
+//    @GetMapping("/about")
+//    public String viewAboutPage(){
+//        return "about";
+//    }
 }
