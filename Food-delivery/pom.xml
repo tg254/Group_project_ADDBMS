@@ -8,11 +8,11 @@
 		<version>2.5.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>ict.fot.ruh.ac.LiveDinner</groupId>
-	<artifactId>Food-delivery</artifactId>
+	<groupId>ict.for.ruh.ac.ADBMSGroupProject</groupId>
+	<artifactId>CanteenManagement</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Food-delivery</name>
-	<description>Demo project for Spring Boot</description>
+	<name>CanteenManagement</name>
+	<description>Group project for ADBMS</description>
 	<properties>
 		<java.version>16</java.version>
 	</properties>

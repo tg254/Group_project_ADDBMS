@@ -15,7 +15,7 @@ public class FoodDeliveryApplication {
 
 	@GetMapping("/")
 	public String viewHome(){
-		return "admin";
+		return "view_admin";
 	}
 
 }
