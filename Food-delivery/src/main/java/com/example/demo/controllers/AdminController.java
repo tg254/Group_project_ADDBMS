@@ -11,9 +11,11 @@ public class AdminController {
 
     @Autowired
     private AdminService adminService;
-    @GetMapping("/")
+    @GetMapping("admin-all")
     public  String viewAllAdmins(Model model){
         model.addAttribute("listAdmins",adminService.getAllEmployees());
-        return "view_all_admins";
+        model.addAttribute("activePage", "drop-1");
+        return "all-admins";
     }
+
 }

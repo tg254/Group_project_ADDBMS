@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+      <html lang="en" xmlns:th="http://www.thymeLeaf.org">
+      <head>
+
+      <title>Canteen Management System</title>
+
+  <div th:replace="fragments/links :: myLinks" ></div>
+
+</head>
+
+<body>
+<!-- ///////////////////////////////////////////////////// header ///////////////////////////////////////////////////// -->
+<div th:replace="fragments/navigation :: myNavigation"></div>
+<!-- ///////////////////////////////////////////////////// header ///////////////////////////////////////////////////// -->
+
+<!-- ///////////////////////////////////////////////////// All Pages ///////////////////////////////////////////////////// -->
+<div class="all-page-title page-breadcrumb">
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1>Stuff</h1>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ///////////////////////////////////////////////////// All Pages ///////////////////////////////////////////////////// -->
+
+<!-- ///////////////////////////////////////////////////// Stuff ///////////////////////////////////////////////////// -->
+<div class="stuff-box">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="heading-title text-center">
+          <h2>Stuff</h2>
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div th:each="admin : ${listAdmins}" class="col-md-4 col-sm-6">
+        <div class="our-team">
+          <div class="pic">
+            <img th:src="@{${admin.adminImgLocation}}">
+            <ul class="social">
+              <li><a href="#" class="fa fa-facebook"></a></li>
+              <li><a href="#" class="fa fa-google-plus"></a></li>
+              <li><a href="#" class="fa fa-instagram"></a></li>
+              <li><a href="#" class="fa fa-linkedin"></a></li>
+            </ul>
+          </div>
+          <div class="team-content">
+            <h3 class="title" th:text="${admin.adminName}"></h3>
+            <span class="post">Web Developer</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<!-- ///////////////////////////////////////////////////// Stuff ///////////////////////////////////////////////////// -->
+
+<!-- ///////////////////////////////////////////////////// Contact info ///////////////////////////////////////////////////// -->
+<div th:replace="fragments/contact_details :: myContact"></div>
+<!-- ///////////////////////////////////////////////////// Contact info ///////////////////////////////////////////////////// -->
+
+<!-- ///////////////////////////////////////////////////// Footer ///////////////////////////////////////////////////// -->
+<div th:replace="fragments/footer :: myFooter"></div>
+<!-- ///////////////////////////////////////////////////// Footer ///////////////////////////////////////////////////// -->
+
+<a href="#" id="back-to-top" title="Back to top" style="display: none;"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></a>
+
+<!-- ///////////////////////////////////////////////////// All Plugins ///////////////////////////////////////////////////// -->
+<div th:replace="fragments/plugs :: myPlugs"></div>
+<!-- ///////////////////////////////////////////////////// All Plugins ///////////////////////////////////////////////////// -->
+
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeLeaf.org">
+<body>
+
+<div th:fragment="myNavigation">
+    <header class="top-navbar">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/logo.png" alt="" />
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-rs-food" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbars-rs-food">
+                    <ul class="navbar-nav ml-auto">
+                        <li th:class="${activePage == 'home'} ? 'nav-item active' : 'nav-item'"><a class="nav-link" th:href="@{/}">Home</a></li>
+                        <li th:class="${activePage == 'menu'} ? 'nav-item active' : 'nav-item'"><a class="nav-link" th:href="@{menu}">Menu</a></li>
+                        <li th:class="${activePage == 'about'} ? 'nav-item active' : 'nav-item'"><a class="nav-link" th:href="@{about}">About</a></li>
+                        <li th:class="${activePage == 'drop-1'} ? 'nav-item active dropdown' : 'nav-item dropdown'">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown-b" data-toggle="dropdown">Pages</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdown-a">
+                                <a class="dropdown-item" th:href="@{reservation}">Reservation</a>
+                                <a class="dropdown-item" th:href="@{admin-all}">Stuff</a>
+                                <a class="dropdown-item" th:href="@{gallery}">Gallery</a>
+                            </div>
+                        </li>
+                        <li th:class="${activePage == 'drop-2'} ? 'nav-item active dropdown' : 'nav-item dropdown'">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Blog</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdown-a">
+                                <a class="dropdown-item" th:href="@{blog}">blog</a>
+                                <a class="dropdown-item" th:href="@{blog-details}">blog Single</a>
+                            </div>
+                        </li>
+                        <li th:class="${activePage == 'contact'} ? 'nav-item active' : 'nav-item'"><a class="nav-link" th:href="@{contact}">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+</div>
+
+
+</body>
+</html>
