@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeLeaf.org">
+<head>
+
+    <title>Canteen Management System</title>
+
+    <div th:replace="fragments/links :: myLinks" ></div>
+
+</head>>
+
+<body>
+<!-- ///////////////////////////////////////////////////// header ///////////////////////////////////////////////////// -->
+<div th:replace="fragments/navigation :: myNavigation"></div>
+<!-- ///////////////////////////////////////////////////// header ///////////////////////////////////////////////////// -->
+
+<!-- ///////////////////////////////////////////////////// All Pages ///////////////////////////////////////////////////// -->
+<div class="all-page-title page-breadcrumb">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>Administrator Registration</h1>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ///////////////////////////////////////////////////// All Pages ///////////////////////////////////////////////////// -->
+
+<!-- Start Contact -->
+<div class="contact-box">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="heading-title text-center">
+                    <h2>Enter Details Bellow</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <form action="#" th:action="@{/register-admin}" th:object="${admin}" method="POST">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input type="text" th:field="*{adminName}" class="form-control"  placeholder="Administrator Name" required data-error="Please enter Administrator Name">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input th:field="*{adminEmail}" type="text" placeholder="Administrator Email" class="form-control" required data-error="Please enter Administrator Email">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input th:field="*{adminPassword}" type="password" placeholder="Administrator Password" class="form-control" required data-error="Please enter Administrator Password">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input type="text" th:field="*{adminImgLocation}" class="form-control"  placeholder="Administrator Image" required data-error="Please enter Administrator Image">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="submit-button text-center">
+                                <button class="btn btn-common" type="submit">Register</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Contact -->
+
+<!-- ///////////////////////////////////////////////////// Footer ///////////////////////////////////////////////////// -->
+<div th:replace="fragments/footer :: myFooter"></div>
+<!-- ///////////////////////////////////////////////////// Footer ///////////////////////////////////////////////////// -->
+<a href="#" id="back-to-top" title="Back to top" style="display: none;"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></a>
+
+<!-- ///////////////////////////////////////////////////// All Plugins ///////////////////////////////////////////////////// -->
+<div th:replace="fragments/plugs :: myPlugs"></div>
+<!-- ///////////////////////////////////////////////////// All Plugins ///////////////////////////////////////////////////// -->
+</body>
+</html>

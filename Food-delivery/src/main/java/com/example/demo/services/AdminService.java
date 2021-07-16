@@ -6,4 +6,5 @@ import java.util.List;
 
 public interface AdminService {
     List<Admin> getAllEmployees();
+    void registerAdmin(Admin admin);
 }

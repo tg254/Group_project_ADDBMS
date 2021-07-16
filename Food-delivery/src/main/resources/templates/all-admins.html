@@ -3,10 +3,8 @@
       <head>
 
       <title>Canteen Management System</title>
-
-  <div th:replace="fragments/links :: myLinks" ></div>
-
-</head>
+        <div th:replace="fragments/links :: myLinks" ></div>
+      </head>
 
 <body>
 <!-- ///////////////////////////////////////////////////// header ///////////////////////////////////////////////////// -->
@@ -59,6 +57,18 @@
   </div>
 </div>
 <!-- ///////////////////////////////////////////////////// Stuff ///////////////////////////////////////////////////// -->
+
+<!-- ///////////////////////////////////////////////////// Admin Registration ///////////////////////////////////////////////////// -->
+<div class="qt-box qt-background">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 ml-auto mr-auto text-center">
+        <p><a class="btn btn-lg btn-circle btn-outline-new-white" th:href="@{admin-register-form}">Register New administrator</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ///////////////////////////////////////////////////// Admin Registration ///////////////////////////////////////////////////// -->
 
 <!-- ///////////////////////////////////////////////////// Contact info ///////////////////////////////////////////////////// -->
 <div th:replace="fragments/contact_details :: myContact"></div>

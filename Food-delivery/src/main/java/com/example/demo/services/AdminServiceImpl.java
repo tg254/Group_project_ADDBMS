@@ -18,4 +18,9 @@ public class AdminServiceImpl implements AdminService {
     public List<Admin> getAllEmployees() {
         return adminRepository.findAll();
     }
+
+    @Override
+    public void registerAdmin(Admin admin) {
+        this.adminRepository.save(admin);
+    }
 }
